@@ -56,7 +56,7 @@ AppjoltCordova.prototype._getErrorCallback = function (errorCallback, functionNa
 	}
 };
 
-AppjoltCordova.prototype.ctor = function() {
+AppjoltCordova.install = function() {
 	if (!window.plugins) {
 		window.plugins = {};
 	}
@@ -65,4 +65,4 @@ AppjoltCordova.prototype.ctor = function() {
 	return window.plugins.appjoltcordova;
 };
 
-cordova.addConstructor(AppjoltCordova.ctor);
+cordova.addConstructor(AppjoltCordova.install);
