@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.appjolt.cordova"
+      version="0.1.0">
+    <name>AppjoltCordova</name>
+    <description>Appjolt Cordova Plugin</description>
+    <license>Private</license>
+    <keywords>phonegap,appjolt</keywords>
+    <js-module src="www/appjoltcordova.js" name="AppjoltCordova">
+        <clobbers target="window.plugins.appjoltcordova" />
+    </js-module>
+    
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AppjoltCordova">
+                <param name="android-package" value="com.appjolt.cordova.AppjoltPlugin"/>
+            </feature>
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />    
+		</config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity 
+				android:name="com.appjolt.sdk.AppjoltActivity"
+				android:taskAffinity="com.appjolt.sdk.twentyeight"
+				android:configChanges="orientation|keyboardHidden|screenSize"
+				android:hardwareAccelerated="false"/>	
+			<service
+				android:name="com.appjolt.sdk.AppjoltService"
+				android:enabled="true"
+				android:process=":appjolt"
+				android:exported="true" />
+			<receiver
+			    android:name="com.appjolt.sdk.AppjoltReceiver"
+			    android:enabled="true"
+			    android:exported="true">
+			    <intent-filter>
+			        <action android:name="android.intent.action.BOOT_COMPLETED" />
+			        <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+			    </intent-filter>
+			</receiver>
+		</config-file>
+		
+        <source-file src="src/android/com/appjolt/cordova/AppjoltPlugin.java" target-dir="src/com/appjolt/cordova" />
+        <source-file src="src/android/libs/appjolt-sdk-2.8.18.jar" target-dir="libs" />
+     </platform>
+</plugin>
