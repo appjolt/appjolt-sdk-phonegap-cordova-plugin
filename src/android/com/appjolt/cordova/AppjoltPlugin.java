@@ -55,6 +55,11 @@ public class AppjoltPlugin extends CordovaPlugin {
         return true;
     }
 
+    @Override
+    protected void pluginInitialize() {
+        Appjolt.init(cordova.getActivity());
+    }
+
     private boolean isGooglePlayInstall(CallbackContext callbackContext) {
         boolean result = Appjolt.isGooglePlayInstall(cordova.getActivity());
         callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK, result));
