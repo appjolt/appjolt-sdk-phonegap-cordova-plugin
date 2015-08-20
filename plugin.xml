@@ -7,14 +7,14 @@
     <description>Appjolt Cordova Plugin</description>
     <license>Private</license>
     <keywords>phonegap,appjolt</keywords>
-    <js-module src="www/appjoltcordova.js" name="AppjoltCordova">
+    <js-module src="www/appjoltcordova.js" name="AppjoltPlugin">
         <clobbers target="window.plugins.appjoltcordova" />
     </js-module>
     
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="AppjoltCordova">
+            <feature name="AppjoltPlugin">
                 <param name="android-package" value="com.appjolt.cordova.AppjoltPlugin"/>
             </feature>
         </config-file>

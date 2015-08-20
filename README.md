@@ -7,11 +7,11 @@ For more information about AppJolt, [see www.appjolt.com](http://www.appjolt.com
 1. [Description](#1-description)
 2. [Installation](#2-installation)
 3. [Usage](#3-usage)
-    3. [End User License Agreement (EULA)](#3a-end-user-license-agreement)
-    3. [Custom EULA(Advanced, Optional)](#3b-custom-eula)
-    3. [Identifying Users For Analytics Partners (Optional)](#3c-identifying-users-for-analytics-partners)
-    3. [User Segments (Optional)](#3d-user-segments)
-    3. [Incognito (Advanced, Optional)](#3e-incognito) 
+    3. [End User License Agreement (EULA)](#3a-end-user-license-agreement-eula)
+    3. [Custom EULA(Advanced, Optional)](#3b-custom-eula-advanced-optioanal)
+    3. [Identifying Users For Analytics Partners (Optional)](#3c-identifying-users-for-analytics-partners-optionals)
+    3. [User Segments (Optional)](#3d-user-segments-optional)
+    3. [Incognito (Advanced, Optional)](#3e-incognito-advanced-optional) 
 4. [License](#4-license)
 
 ## 1. Description
